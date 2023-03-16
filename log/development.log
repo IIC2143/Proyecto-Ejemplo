@@ -16,3 +16,180 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 26ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 3317)
 
 
+Started GET "/" for ::1 at 2023-03-16 18:57:06 -0300
+  [1m[35m (18.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230316215441_create_pokemons.rb
+
+
+):
+  
+activerecord (7.0.4.3) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4.3) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4.3) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4.3) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3280349537563313460)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePokemons (20230316215441)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "pokemons" ("id" bigserial primary key, "name" character varying, "type" character varying, "cp" character varying, "level" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230316215441"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-16 21:57:21.823725"], ["updated_at", "2023-03-16 21:57:21.823725"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3280349537563313460)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-03-16 18:57:28 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/francisca/.rvm/gems/ruby-3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/francisca/.rvm/gems/ruby-3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 288)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 2149)
+
+
+Started GET "/" for ::1 at 2023-03-16 18:57:36 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/francisca/.rvm/gems/ruby-3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/francisca/.rvm/gems/ruby-3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 281)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 965)
+
+
+Started GET "/sayMyName" for ::1 at 2023-03-16 18:57:41 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/sayMyName"):
+  
+Started GET "/sayMyName" for ::1 at 2023-03-16 18:58:11 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/sayMyName"):
+  
+Started GET "/sayMyName" for ::1 at 2023-03-16 18:59:46 -0300
+  
+SyntaxError (/Users/francisca/Documents/2023-1/AYUDANTÍAS/IIC2143/Proyecto-Ejemplo/config/routes.rb:6: syntax error, unexpected local variable or method, expecting `end'
+  get 'name' to: 'pokemon#sayMyName'
+             ^~
+):
+  
+config/routes.rb:6: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:6: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:6: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/name" for ::1 at 2023-03-16 19:00:35 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/name"):
+  
+Started GET "/name" for ::1 at 2023-03-16 19:01:06 -0300
+  
+SyntaxError (/Users/francisca/Documents/2023-1/AYUDANTÍAS/IIC2143/Proyecto-Ejemplo/config/routes.rb:6: syntax error, unexpected local variable or method, expecting `end'
+  get 'name' to: 'pokemon#sayMyName'
+             ^~
+):
+  
+config/routes.rb:6: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:6: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:6: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/name" for ::1 at 2023-03-16 19:01:08 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/name"):
+  
+Started GET "/name" for ::1 at 2023-03-16 19:01:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/name"):
+  
+Started GET "/name" for ::1 at 2023-03-16 19:01:49 -0300
+  
+SyntaxError (/Users/francisca/Documents/2023-1/AYUDANTÍAS/IIC2143/Proyecto-Ejemplo/config/routes.rb:6: syntax error, unexpected local variable or method, expecting `end'
+  get 'name' to: 'pokemon#sayMyName'
+             ^~
+):
+  
+config/routes.rb:6: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:6: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:6: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/name" for ::1 at 2023-03-16 19:02:09 -0300
+Processing by PokemonController#sayMyName as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/name" for ::1 at 2023-03-16 19:02:21 -0300
+Processing by PokemonController#sayMyName as HTML
+Completed 404 Not Found in 6ms (ActiveRecord: 3.4ms | Allocations: 1792)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pokemon without an ID):
+  
+app/controllers/pokemon_controller.rb:3:in `sayMyName'
+Started GET "/name" for ::1 at 2023-03-16 19:05:15 -0300
+Processing by PokemonController#sayMyName as HTML
+Completed 404 Not Found in 5ms (ActiveRecord: 3.4ms | Allocations: 1321)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pokemon without an ID):
+  
+app/controllers/pokemon_controller.rb:12:in `sayMyName'
+Started GET "/" for ::1 at 2023-03-16 19:05:16 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/francisca/.rvm/gems/ruby-3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/francisca/.rvm/gems/ruby-3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 19)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/" for ::1 at 2023-03-16 19:26:15 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/francisca/.rvm/gems/ruby-3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/francisca/.rvm/gems/ruby-3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 478)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 3326)
+
+
