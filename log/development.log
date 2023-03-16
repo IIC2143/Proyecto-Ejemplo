@@ -1,0 +1,18 @@
+  [1m[35m (121.2ms)[0m  [1m[35mCREATE DATABASE "Proyecto-Ejemplo_development" ENCODING = 'unicode'[0m
+  [1m[35m (30.5ms)[0m  [1m[35mCREATE DATABASE "Proyecto-Ejemplo_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2023-03-16 15:28:29 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/francisca/.rvm/gems/ruby-3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/francisca/.rvm/gems/ruby-3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 586)
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 4654)
+
+
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE DATABASE "Proyecto-Ejemplo_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE "Proyecto-Ejemplo_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2023-03-16 15:49:28 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/francisca/.rvm/gems/ruby-3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/francisca/.rvm/gems/ruby-3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 478)
+Completed 200 OK in 26ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 3317)
+
+
